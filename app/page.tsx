@@ -1,8 +1,10 @@
+import LandingPage from "@/components/landing-page";
+import { SignedOut } from "@clerk/nextjs";
 
 export default function Home() {
   return (
-    <h1>
-      This is working
-    </h1>
+    <SignedOut>
+    <LandingPage/>
+    </SignedOut>
   );
 }

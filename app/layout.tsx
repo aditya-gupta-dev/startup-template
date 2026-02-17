@@ -2,7 +2,8 @@ import type { Metadata } from 'next'
 import {
   ClerkProvider,
   SignedIn,
-  SignedOut
+  SignedOut,
+  SignOutButton
 } from '@clerk/nextjs'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
@@ -32,12 +33,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-            <SignedOut>
-              <LandingPage/>
-            </SignedOut>
-            <SignedIn>
-              <LandingPage/>
-            </SignedIn>
+             { children } 
         </body>
       </html>
     </ClerkProvider>
