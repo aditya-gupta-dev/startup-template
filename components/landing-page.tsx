@@ -3,9 +3,7 @@
 import Silk from "@/components/Silk";
 import StaggeredMenu from "./staggered-menu";
 import React from "react";
-import { ChefHat, icons } from "lucide-react";
 import GradientText from "./gradient-text";
-import { SignedOut } from "@clerk/nextjs";
 
 export function Background({ children }: {
   children: React.ReactNode

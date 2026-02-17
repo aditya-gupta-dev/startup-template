@@ -8,7 +8,7 @@ const pool = new Pool({
   port: Number.parseInt(process.env.PORT ?? "13090"),
   user: process.env.USERNAME!,
   password: process.env.PASSWORD!,
-  idleTimeoutMillis: 1000,
+  idleTimeoutMillis: 5000,
   ssl: {
     rejectUnauthorized: false,
     ca: readFileSync(process.env.CERT_FILE ?? "ca.pem").toString()
