@@ -13,7 +13,7 @@ export default defineConfig({
     password: process.env.PASSWORD!,
     ssl: {
       rejectUnauthorized: false,
-      ca: readFileSync(process.env.CERT_FILE ?? "ca.pem").toString()
+      ca: process.env.CERT_FILE ?? "ca.pem"
     }
   
   }

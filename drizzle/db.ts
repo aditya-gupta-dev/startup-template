@@ -1,5 +1,4 @@
 import { Pool } from "pg";
-import { readFileSync } from "fs";
 import { drizzle } from "drizzle-orm/node-postgres";
 
 const pool = new Pool({
@@ -11,7 +10,7 @@ const pool = new Pool({
   idleTimeoutMillis: 5000,
   ssl: {
     rejectUnauthorized: false,
-    ca: readFileSync(process.env.CERT_FILE ?? "ca.pem").toString()
+    ca: process.env.CERT_DB ?? ""
   }
 });
 
