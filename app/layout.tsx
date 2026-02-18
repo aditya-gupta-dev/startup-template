@@ -4,6 +4,7 @@ import {
 } from '@clerk/nextjs'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
+import { config } from '@/config'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -16,8 +17,8 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Cookbook',
-  description: 'end-to-end solution for managing resturant inventory',
+  title: config.title,
+  description: config.description
 }
 
 export default function RootLayout({

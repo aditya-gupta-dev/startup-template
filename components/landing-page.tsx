@@ -4,6 +4,7 @@ import Silk from "@/components/Silk";
 import StaggeredMenu from "./staggered-menu";
 import React from "react";
 import GradientText from "./gradient-text";
+import { config } from "@/config";
 
 export function Background({ children }: {
   children: React.ReactNode
@@ -69,7 +70,7 @@ export default function LandingPage() {
           showBorder={false}
           className="text-5xl mt-24"
         >
-          Add a splash of color!
+         { config.herotitle }
         </GradientText>
       </Background>
     </>
